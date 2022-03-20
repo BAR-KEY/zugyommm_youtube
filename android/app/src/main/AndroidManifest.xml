@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.zugyommm_youtube">
-    <user-permission android:name="android.permission.INTERNET"/>
+     <uses-permission android:name="android.permission.INTERNET" /> 
    <application
         android:label="zugyommm_youtube"
         android:name="${applicationName}"

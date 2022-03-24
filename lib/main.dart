@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:zugyommm_youtube/binding/init_binding.dart';
 import 'package:zugyommm_youtube/src/app.dart';
+import 'package:zugyommm_youtube/src/binding/init_binding.dart';
 // import 'dart:developer';
 // import 'package:flutter/cupertino.dart';
 // import 'package:flutter/rendering.dart';

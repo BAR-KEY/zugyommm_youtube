@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:zugyommm_youtube/controller/app_controller.dart';
+import 'package:zugyommm_youtube/src/controller/app_controller.dart';
+import 'package:zugyommm_youtube/src/pages/explore.dart';
+import 'package:zugyommm_youtube/src/pages/home.dart';
+import 'package:zugyommm_youtube/src/pages/library.dart';
+import 'package:zugyommm_youtube/src/pages/subscribe.dart';
 
 class App extends GetView<Appcontroller> {
   const App({Key? key}) : super(key: key);
@@ -9,7 +13,27 @@ class App extends GetView<Appcontroller> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
+        body: Obx(() {
+          switch (RouteName.values[controller.currentIndex.value]) {
+            case RouteName.Home:
+              return const Home();
+              break;
+            case RouteName.Explore:
+              return const Explore();
+
+              break;
+            case RouteName.Add:
+              break;
+            case RouteName.Subs:
+              return const Subscribe();
+
+              break;
+            case RouteName.Library:
+              return const Library();
+
+              break;
+          }
+        }),
         bottomNavigationBar: Obx(
           () => BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
